@@ -1,0 +1,111 @@
+Skip to content
+This repository
+Pull requests
+Issues
+Gist
+ @cleriphil
+ Unwatch 1
+  Unstar 1
+  Fork 0
+cleriphil/Roman_Forum
+ branch: master  Roman_Forum/css/styles.css
+@cleriphilcleriphil 3 days ago add style change to home page
+1 contributor
+RawBlameHistory     96 lines (79 sloc)  1.34 kB
+body {
+  background-image: url('../img/piranesi.jpg');
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  min-height: 700px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #B29600;
+}
+
+a {
+color: #CD5555;
+}
+
+.question-answer-box ul {
+  list-style: none;
+  padding-left: 0;
+  min-height: 15px;
+}
+
+.contentboard {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, .8);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.romanheading {
+  font-size: 60px;
+  font-family: 'Alegreya', serif;
+
+}
+
+.subheading {
+  position: relative;
+  top: -20px;
+  font-size: 20px;
+}
+
+.heading-phrase {
+  font-family: 'Alegreya', serif;
+  font-size: 35px;
+  position: relative;
+  top: -40px;
+
+}
+
+.question-answer-box {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.single-answer {
+  padding-left: 10px;
+  min-height: 120px;
+}
+
+.alter-buttons-answer {
+  position: relative;
+  top: -33px;
+  right: 10px;
+  float: right;
+}
+
+.plus-icon {
+  position: relative;
+  top: -25px;
+  right: 10px;
+  float: right;
+}
+
+.alter-buttons {
+  position: relative;
+  top: -40px;
+  right: 10px;
+  float: right;
+}
+.check-mark {
+  float: right;
+}
+
+.inner-container {
+  position: relative;
+  top: -30px;
+}
+
+.text-font {
+  font-family: 'Alegreya', serif;
+}
+Status API Training Shop Blog About Help
+© 2015 GitHub, Inc. Terms Privacy Security Contact

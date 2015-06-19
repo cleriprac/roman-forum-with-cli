@@ -1,0 +1,16 @@
+
+<ul>
+  {{#each question in model}}
+  <li>{{#link-to 'question' question.id}}{{question.question}}{{/link-to}}</li>
+
+  {{/each}}
+</ul>
+
+<div class="plus-icon">
+  <p>{{#link-to 'questions.new' classNames="btn-default"}}Ask a Question{{/link-to}}</p>
+</div>
+
+
+<!-- <span class="glyphicon glyphicon-plus"></span> -->
+
+{{outlet}}
