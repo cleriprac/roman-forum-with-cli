@@ -1,17 +1,3 @@
-Skip to content
-This repository
-Pull requests
-Issues
-Gist
- @cleriphil
- Unwatch 1
-  Unstar 1
-  Fork 0
-cleriphil/Roman_Forum
- branch: master  Roman_Forum/css/styles.css
-@cleriphilcleriphil 3 days ago add style change to home page
-1 contributor
-RawBlameHistory     96 lines (79 sloc)  1.34 kB
 body {
   background-image: url('../img/piranesi.jpg');
   background-repeat: repeat-x;
@@ -26,6 +12,9 @@ a:hover {
 
 a {
 color: #CD5555;
+}
+.float-right {
+  float: right;
 }
 
 .question-answer-box ul {
@@ -82,22 +71,13 @@ color: #CD5555;
   float: right;
 }
 
-.plus-icon {
-  position: relative;
-  top: -25px;
-  right: 10px;
-  float: right;
-}
-
 .alter-buttons {
   position: relative;
   top: -40px;
   right: 10px;
   float: right;
 }
-.check-mark {
-  float: right;
-}
+
 
 .inner-container {
   position: relative;
@@ -107,5 +87,6 @@ color: #CD5555;
 .text-font {
   font-family: 'Alegreya', serif;
 }
+
 Status API Training Shop Blog About Help
 © 2015 GitHub, Inc. Terms Privacy Security Contact

@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
       var newAnswer = this.store.createRecord('answer', {
         answer: this.get('answer'),
         author: this.get('author'),
+        date: new Date,
         question: this.get('controllers.question.model')
       });
 
@@ -21,7 +22,7 @@ export default Ember.Controller.extend({
         author: '',
         question: ''
       });
-    this.transitionToRoute('questions');
+    this.transitionToRoute('question', question.get('id'));
     }
   }
 });

@@ -18,10 +18,28 @@ export default Ember.Controller.extend({
        question.save();
      },
      delete: function() {
+       var question = this.get('model');
+       var answers = question.get('answers');
+
+       var answerIds = [];
+
+       answers.forEach(function(answer){
+         answerIds.push(answer.get('id'));
+       });
+
        if(confirm('Are you sure?')) {
-         this.get('model').destroyRecord();
-         this.transitionToRoute('questions');
+        this.store.find('answer').then(function(allAnswers) {
+          answerIds.forEach(function(id){
+            allAnswers.forEach(function(anAnswer) {
+              if(id === anAnswer.get('id')) {
+                anAnswer.destroyRecord();
+              }
+            });
+          });
+         question.destroyRecord();
+        });
        }
-     }
+     this.transitionToRoute('questions');
    }
+ }
 });

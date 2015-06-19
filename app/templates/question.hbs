@@ -32,13 +32,13 @@
     <h4>Answers:</h4>
       <ul>
         {{#each answer in model.answers}}
-          <li>{{answer.author}} said,"<span class="text-font">{{answer.answer}}</span>"</li>
+          <li>{{answer.author}} said, "<span class="text-font">{{answer.answer}}"<br><span class="small">{{answer.date}}</span></span></li>
         {{/each}}
       </ul>
 
 
 
-    {{#link-to 'question.new-answer'}}New Answer{{/link-to}}
+    {{#link-to 'question.new-answer'}}Add a New Answer{{/link-to}}
 
   </div>
 
