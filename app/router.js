@@ -9,7 +9,14 @@ Router.map(function() {
   this.resource('questions', { path: '/'}, function() {
     this.route('new');
   });
-  this.resource('question', { path: ':question_id'});
+  this.resource('question', { path: ':question_id'}, function() {
+    this.route('new-answer');
+  });
+
 });
+
+
+
+
 
 export default Router;

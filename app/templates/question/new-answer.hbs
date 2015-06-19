@@ -1,0 +1,10 @@
+<h2>Add an Answer</h2>
+
+<form>
+  {{input type="text" placeholder="Answer" class="form-control" value=answer}}
+<br>
+  {{input type="text" placeholder="Author" class="form-control" value=author}}
+
+<br>
+    <button class="btn btn-default" {{action 'addAnswer'}}>Submit</button>
+</form>

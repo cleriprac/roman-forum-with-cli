@@ -1,4 +1,47 @@
+{{#if isEditing}}
+  <h1>Edit a Question</h1>
+  <form>
+    <label for="question">Question</label>
+    {{input id="question" placeholder=model.question class="form-control text-font" value=question}}
 
-{{question.question}}
-{{question.description}}
-{{quesiton.author}}
+    <label for="description">Description</label>
+    {{textarea id="description" placeholder=model.description class="form-control text-font" value=description}}
+
+    <label for="author">Author</label>
+    {{input id="author" placeholder=model.author class="form-control text-font" value=author}}
+  <br>
+
+      <button class="btn btn-primary" {{action 'save'}}>Save Changes</button>
+  </form>
+{{else}}
+  <div class="question-answer-box">
+    <h3>Q: {{model.question}}</h3>
+    <h4 class="text-font">{{model.description}}</h4>
+    <h4>Asked by {{model.author}}</h4>
+    <div class="alter-buttons">
+
+      <button class="btn btn-default"{{action 'edit'}}>Edit</button>
+      <button class="btn btn-default" {{action 'delete'}}>Delete</button>
+
+    </div>
+  </div>
+
+  <div class="question-answer-box">
+
+
+    <h4>Answers:</h4>
+      <ul>
+        {{#each answer in model.answers}}
+          <li>{{answer.author}} said,"<span class="text-font">{{answer.answer}}</span>"</li>
+        {{/each}}
+      </ul>
+
+
+
+    {{#link-to 'question.new-answer'}}New Answer{{/link-to}}
+
+  </div>
+
+{{/if}}
+
+{{outlet}}
